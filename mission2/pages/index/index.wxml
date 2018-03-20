@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class='container'>
+  <view class='carousel'>
+    <!--轮播图  -->
+    <swiper indicator-dots="true" autoplay='true' circular='true'>
+      <block wx:for="{{aImg}}" wx:key="index">
+        <swiper-item>
+          <image mode='widthFix' src='{{item}}'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='articles'>
+    <!--文章列表  -->
+    <text class='wrap-title'>文章</text>
+    <view class='article'>
+       <block wx:for='{{arrArt}}' wx:key="index">
+          <view class='article-list' bindtap='toArticle' data-id="{{item.id}}">
+            <text class='article-title'>{{item.title}}</text>
+            <image mode='widthFix' class='article-img' src='{{item.cover}}'></image>
+          </view>
+      </block> 
+    </view>
+  </view>
+</view>

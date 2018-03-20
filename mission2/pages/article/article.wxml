@@ -1,0 +1,27 @@
+ <view class='container'>
+  <!--标题  -->
+  <view class='title'>{{title}}</view>
+  <!--发布时间  -->
+  <view class='time'>{{time}}</view>
+  <!--插图  -->
+  <view class='cover'><image mode='widthFix' src='{{cover}}'></image></view>
+  <!--文章主体  -->
+  <view class='content'>
+    <block wx:for="{{aContent}}" wx:key="index">
+      <view class='text-wrapper' wx:if='{{item.text}}'><text>{{item.text}}</text></view>
+      <view class='img-wrapper' wx:if='{{item.url}}'><image mode='widthFix' src='{{item.url}}'></image></view>
+    </block>
+  </view>
+  <!--分割线  -->
+  <view class='line'></view>
+  <!--推荐阅读  -->
+  <view class='recommend-title'>推荐阅读</view>
+  <view class='recommend-content'>
+    <view wx:for='{{aRecommend}}' wx:key="index" data-id='{{item.id}}' bindtap='toArticle'>{{item.title}}</view>
+  </view>
+  <!--底部悬浮  -->
+  <view class='btn-group'>
+    <view bindtap='toIndex'><button>首页</button></view>
+    <view><button open-type='share'>分享</button></view>
+  </view>
+ </view>

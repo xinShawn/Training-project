@@ -1,0 +1,32 @@
+/**index.wxss**/
+.articles {
+  margin: 40rpx 0;
+}
+swiper {
+   height: 500rpx; 
+}
+swiper image{
+  width: 100%;
+}
+.wrap-title {
+  font-size: 60rpx;
+  font-weight: bold;
+}
+.article-list {
+  position: relative;
+  margin: 20rpx 0;
+  text-align: center;
+  overflow: hidden;
+}
+.article-title {
+  position: absolute;
+  bottom: 2rpx;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 10;
+  text-align: left;
+}
+.article-img {
+  vertical-align: bottom;
+  width: 100%
+}
