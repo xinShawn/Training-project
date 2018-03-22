@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>聊天窗</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 编辑器 -->
+        <div class="editor-wrapper">
+            <div><button id="copy">复制到微信</button></div>
+            <!-- 第一个用户 -->
+            <div>
+                <!-- 用户名 -->
+                <div class="userinfo">
+                    <span class="username">红小兵</span>
+                    <img class="user-avatar" src="http://mmbiz.qpic.cn/mmbiz_png/jFfUbqak7PTiaZ6SEWQib1KIsDNUnqp8r6vElwibqVWxfJnwYu3icJqbJfiajHxeTHc8l8H4tfvBCaI7OM4NDG8ws8A/0?wx_fmt=png" alt="">
+                </div>
+
+                <div class="emoji-wrapper emoji-a">
+                    <i>😀</i>
+                    <i>😂</i>
+                    <i>😣</i>
+                    <i>😓</i>
+                    <i>😘</i>
+                    <i>😎</i>
+                    <i>🤧</i>
+                    <i>😜</i>
+                </div>
+
+                <div class="editor">
+                    <!-- 文本域 -->
+                    <div class="editor-area">
+                        <textarea id="area-a" cols="30" rows="10" placeholder="Enter换行，Ctrl + Enter提交"></textarea>
+                        <!-- 检查数据发生变化的情况 -->
+                        <span id="count-a">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第二个用户 -->
+            <div>
+                <!-- 用户名 -->
+                <div class="userinfo">
+                    <span class="username">兵小红</span>
+                    <img class="user-avatar" src="http://mmbiz.qpic.cn/mmbiz_png/6ias4WNGRIJl3NKqzCVG5l1FNyicFfibNS8wcIMIxR5r9uMJukmm8zEW0ySoQl9PT6kZLiasdic9b864WVkwxiaNYI1g/0?wx_fmt=png" alt="">
+                </div>
+
+                <div class="emoji-wrapper emoji-b">
+                    <i>😀</i>
+                    <i>😂</i>
+                    <i>😣</i>
+                    <i>😓</i>
+                    <i>😘</i>
+                    <i>😎</i>
+                    <i>🤧</i>
+                    <i>😜</i>
+                </div>
+
+                <div class="editor">
+                    <!-- 文本域 -->
+                    <div class="editor-area">
+                        <textarea id="area-b" cols="30" rows="10" placeholder="Enter换行，Ctrl + Enter提交"></textarea>
+                        <!-- 检查数据发生变化的情况 -->
+                        <span id="count-b">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 消息窗 -->
+        <div class="news-wrapper">
+
+            <section id="target">
+                <!-- <section data="左气泡">
+                    <section class="usera-wrapper">
+                        <section class="name">红小兵</section>
+                        <section class="triangle">
+                            <section class="p-wrapper">
+                                <p>你好</p>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+
+                <section data="左气泡">
+                    <section class="usera-wrapper-single">
+                        <section class="triangle">
+                            <section class="p-wrapper">
+                                <p>你好</p>
+                            </section>
+                        </section>
+                    </section>
+                </section> -->
+
+            </section>
+
+        </div>
+
+        <!-- 删除菜单 -->
+        <div id="btn-del">删除</div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>

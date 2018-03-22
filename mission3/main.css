@@ -1,0 +1,222 @@
+.container {
+    width: 700px;
+    height: 800px;
+    display: flex;
+}
+
+.container>div:not(#btn-del) {
+    flex: 0 0 50%;
+}
+
+#btn-del {
+    position: absolute;
+    background-color: #fff;
+    padding: 4px 8px;
+    border: 1px #000 solid;
+    display: none;
+    z-index: 10;
+}
+
+.news-wrapper {
+    padding: 10px;
+    border: 10px rgb(245, 245, 245) solid;
+    overflow-y: auto;
+    position: relative;
+}
+
+.editor-wrapper {
+    background-color: rgb(225, 225, 225);
+    padding: 4px;
+}
+
+.editor-wrapper>div {
+    margin: 6px 0
+}
+
+button {
+    background-color: rgb(81, 177, 246);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 14px;
+}
+
+.userinfo {
+    overflow: hidden;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 60px;
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    float: right;
+}
+
+.emoji-wrapper i{
+    font-style: normal;
+    margin: 0 2px;
+}
+
+.editor {
+    display: flex;
+    margin: 10px 0
+}
+
+.editor .btn-group {
+    flex: 0 0 60px;
+    text-align: center;
+}
+
+.editor .editor-area {
+    position: relative;
+}
+
+.editor #count-a, .editor #count-b {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: rgb(169, 169, 169);
+    font-size: 14px;
+}
+
+/* 消息窗口 */
+/* user A */
+.usera-wrapper {
+    width: 100%;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-size: 40px;
+    padding: 5px 45px 10px 40px;
+    background-position: 0% 0px;
+}
+
+.usera-wrapper .name {
+    margin: 0px 10px;
+    text-align: left;
+}
+
+.usera-wrapper .triangle {
+    background-repeat: no-repeat;
+    background-size: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-image: url('https://mmbiz.qlogo.cn/mmbiz_png/DBwJzibicWPjH3uBYLQZwMwJWlic1qMauGpVTickVnziaRcrtkX6eyvSjLrj4rlgom1abT7Z7PG6ISHWMsXdFLibLVGQ/0?wx_fmt=png');
+    background-position: 0% 0%;
+    padding: 0px 0px 0px 10px;
+}
+
+.usera-wrapper .p-wrapper {
+    display: inline-block;
+    max-width: 100%;
+    min-height: 35px;
+    padding: 5px 12px 6px;
+    border-radius: 0px 5px 5px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    word-break: normal;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    background-color: rgb(0, 184, 236);
+}
+
+/* 多次发送消息 */
+.usera-wrapper-single {
+    width: 100%;
+    box-sizing: border-box;
+    background-size: 40px;
+    padding: 5px 45px 10px 40px;
+}
+
+.usera-wrapper-single .triangle {
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0px 0px 0px 10px;
+}
+
+.usera-wrapper-single .p-wrapper {
+    display: inline-block;
+    max-width: 100%;
+    min-height: 35px;
+    padding: 5px 12px 6px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    word-break: normal;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    background-color: rgb(0, 184, 236);
+}
+
+/* user B */
+.userb-wrapper {
+    width: 100%;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-size: 40px;
+    padding: 5px 40px 10px 45px;
+    background-position: 100% 0px;
+}
+
+.userb-wrapper .name {
+    margin: 0px 10px;
+    text-align: right;
+}
+
+.userb-wrapper .triangle {
+    background-repeat: no-repeat;
+    background-size: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-image: url('https://mmbiz.qlogo.cn/mmbiz_png/DBwJzibicWPjH3uBYLQZwMwJWlic1qMauGpSIaBu48EGzekUomBmX2YumMSaISSZC8Im6ACOictt2bib6c8BHicGqOsA/0?wx_fmt=png');
+    background-position: 100% 0%;
+    padding: 0px 10px 0px 0px;
+}
+
+.userb-wrapper .p-wrapper {
+    display: inline-block;
+    max-width: 100%;
+    min-height: 35px;
+    padding: 5px 12px 6px;
+    border-radius: 5px 0px 5px 5px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    word-break: normal;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    float: right;
+    background-color: rgb(239, 110, 126);
+}
+
+/* 多次发送消息 */
+.userb-wrapper-single {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 40px 10px 45px;
+}
+
+.userb-wrapper-single .triangle {
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0px 10px 0px 0px;
+}
+
+.userb-wrapper-single .p-wrapper {
+    display: inline-block;
+    max-width: 100%;
+    min-height: 35px;
+    padding: 5px 12px 6px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    word-break: normal;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    float: right;
+    background-color: rgb(239, 110, 126);
+}
