@@ -2,7 +2,8 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
 {
     if(request == 'format') {
         // 使用dom插入的方法，直接修改innerHTML的话，图片显示有问题。
-        var dom = document.createElement("div");
+        var dom = document.createElement("p");
+        dom.style.textAlign = "center";
         dom.innerText = "▲▲▲▲▲▲▲▲▲▲▲▲";
 
         // 格式化文章
@@ -12,10 +13,14 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
             item.style.textAlign = "center"
         });
 
-        // 修改文字颜色
+        // 修改文字样式
         var aSpan = document.querySelectorAll("#js_content p span");
-        aSpan.forEach(function (item) {
-            item.style.color = "black"
+        // 获取chrome本地储存的文字大小
+        chrome.storage.sync.get({size: 18}, function(res) {
+            aSpan.forEach(function (item) {
+                item.style.color = "black";
+                item.style.fontSize = res.size + 'px';
+            });
         });
 
         // 图片下面加入符号

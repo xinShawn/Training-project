@@ -24,8 +24,14 @@
         "default_title": "格式化文档",
         "default_popup": "popup.html"
     },
-    "permissions": ["declarativeContent", "tabs"],
+    "permissions": ["declarativeContent", "tabs", "storage"],
     "background": {
         "scripts": ["js/background.js" ]
+    },
+    "options_page": "options.html",
+    "options_ui":
+    {
+        "page": "options.html",
+        "chrome_style": true
     }
 }
